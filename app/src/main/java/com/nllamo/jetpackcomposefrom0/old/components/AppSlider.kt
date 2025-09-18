@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+@Preview(showBackground = true)
 @Composable
 fun AppSlider() {
     Column(
@@ -29,6 +30,7 @@ fun AppSlider() {
     }
 }
 
+@Preview(showBackground = true)
 @Composable
 fun AppSliderAdvanced() {
     Column(
@@ -51,6 +53,7 @@ fun AppSliderAdvanced() {
     }
 }
 
+@Preview(showBackground = true)
 @Composable
 fun AppRangeSlider() {
     Column(
@@ -68,10 +71,4 @@ fun AppRangeSlider() {
         Text(text = "Valor inferior: ${currentRange.start}")
         Text(text = "Valor superior: ${currentRange.endInclusive}")
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun AppSliderPreview() {
-    AppRangeSlider()
 }

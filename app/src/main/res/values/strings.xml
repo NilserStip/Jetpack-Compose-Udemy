@@ -4,5 +4,6 @@
     <string name="aris">Aris</string>
     <string name="aristi_devs">@AristiDevs</string>
     <string name="time">4h</string>
-    <string name="text">Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba </string>
+    <string name="text">Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba Texto de prueba</string>
+    <string name="option_dangerous">No puedes acceder a ésta opción</string>
 </resources>

@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -263,10 +264,20 @@ fun AppAlertDialogItemList(
                 TextButton(onClick = {}) {
                     Text(text = "Cancelar", color = Color.Gray)
                 }
-                TextButton(onClick = {}) {
+                TextButton(onClick = onConfirm) {
                     Text(text = "Ok", color = Color.Gray)
                 }
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun AppAlertDialogItemListPreview(){
+    AppAlertDialogItemList(
+        show = true,
+        onDismiss = {},
+        onConfirm = {}
+    )
 }

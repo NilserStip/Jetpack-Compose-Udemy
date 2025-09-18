@@ -25,7 +25,6 @@ import com.nllamo.jetpackcomposefrom0.old.model.CheckInfo
 
 @Composable
 fun AppCheckbox() {
-
     var myState by rememberSaveable { mutableStateOf(true) }
 
     Column(
@@ -70,7 +69,6 @@ fun AppCheckboxAdvanced(
     checkInfo: CheckInfo,
     onCheckedChange: (Boolean) -> Unit
 ) {
-
     Row(
         modifier = Modifier.padding(8.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -93,7 +91,6 @@ fun AppCheckboxAdvanced(
 fun AppTriStateCheckbox(
     toggleableState: (ToggleableState) -> Unit,
 ) {
-
     var status by rememberSaveable { mutableStateOf(ToggleableState.Off) }
 
     TriStateCheckbox(state = status, onClick = {
@@ -117,7 +114,6 @@ fun AppTriStateCheckbox(
 @Preview(showBackground = true)
 @Composable
 fun AppCheckboxAdvancedPreview() {
-
 //    Column {
 //        AppTriStateCheckbox() {}
 //        AppCheckboxAdvanced(

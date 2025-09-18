@@ -62,7 +62,6 @@ fun SuperHeroScreen() {
             )
             .padding(horizontal = 4.dp)
             .background(Color.White),
-        contentAlignment = Alignment.Center
     ) {
 //        SuperHeroWithSpecialControlsView()
         SuperHeroStickyView()
@@ -122,25 +121,27 @@ private fun SuperHeroStickyView() {
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         superHeroesByPublisher.forEach { (publisher, superHeroes) ->
-            stickyHeader {
+            item {
                 Text(
                     modifier = Modifier
                         .fillMaxWidth()
                         .background(Color.Green),
                     text = publisher
                 )
-            }
-
-            items(superHeroes) { superHero ->
-                ItemHero(
-                    superHero = superHero,
-                    onItemSelected = {
-                        Toast.makeText(context, "Selected: ${it.alias}", Toast.LENGTH_SHORT)
-                            .show()
+                LazyRow(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    items(superHeroes) { superHero ->
+                        ItemHero(
+                            superHero = superHero,
+                            onItemSelected = {
+                                Toast.makeText(context, "Selected: ${it.alias}", Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                        )
                     }
-                )
+                }
             }
-
         }
     }
 }

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -17,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.nllamo.jetpackcomposefrom0.R
 
+@Preview(showBackground = true)
 @Composable
 fun AppImage() {
     Column(
@@ -45,6 +47,25 @@ fun AppImageAdvance() {
                 .size(100.dp)
                 .clip(CircleShape)
                 .border(2.dp, Color.Red, CircleShape)
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun AppImageRoundedCorner() {
+    Column(
+        modifier = Modifier
+            .background(Color.Black)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = "App Image",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(100.dp)
+                .clip(RoundedCornerShape(25f))
+//                .border(2.dp, Color.Red, RoundedCornerShape(25f)) // add border (optional)
         )
     }
 }
